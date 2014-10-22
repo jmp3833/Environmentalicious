@@ -5,14 +5,15 @@
         <link rel ="stylesheet" href="../css/bootstrap.css">
         <link rel ="stylesheet" href="../css/bootstrap-theme.css">
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="../../src/app/routes.js"></script>
     </head>
 
-    <body>
+    <body ng-app="">
         <!--                    NAVIGATION                                     -->
         <nav class="navbar navbar-default" role="navigaion">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#"><i>Environmentalicious</i></a>
+                    <a class="navbar-brand" href="#"><i><b>Environmentalicious</b></i></a>
                     
                 </div>
 
@@ -20,18 +21,32 @@
                     <ul class="nav navbar-nav">
                         <li><a href="#">Create Event</a></li>
                         <li><a href="#"> Find Event</a></li>
-                        <li><a href="#"> Discussions</a></li>
+                        <li><a href="forum.html"> Discussions</a></li>
                         <li><a href="#"> About</a></li>
                     </ul>
-                    <p class="navbar-text navbar-right">Welcome, User!</p>
+                    <p class="navbar-text navbar-right">Welcome, <a href="/about.html">User!</a></p>
                 </div>
             </div>
         </nav>
 
         <!--                    PAGE CONTENT                       -->
+        <div class="container">
+            <div class="OuterMostClass row">
+                <div class="outerClass col-xs-6" id="my-events">
+                    <h1> My Events </h1>
+                </div>
+                <div class="outerClass2 col-xs-6" id="local-events">
+                    <h1>Events in My City</h1>
+                    <p> Where do you live?</p>
+                    </br>
+                    <div class="outerclass col-xs-6" id="pop-events">
+                        <h4>Popular Events</h4>
+                    </div> 
+                    <div class="outerclass col-xs-6" id="maps-api">   
+                    </div>
 
-        <div class="container" id="my-events">
-        </div> 
-
+                </div>
+            </div> 
+        </div>
     </body>
 </html>
