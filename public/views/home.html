@@ -32,17 +32,34 @@
         <!--                    PAGE CONTENT                       -->
         <div class="container">
             <div class="OuterMostClass row">
-                <div class="outerClass col-xs-6" id="my-events">
+                <div class="outerClass col-md-5" id="my-events">
                     <h1> My Events </h1>
+                    <p> You don't seem to have any events!</p>
+                    <br/>
+                    <p> Would you like to <a href="#">create an event?</a></p>
                 </div>
-                <div class="outerClass2 col-xs-6" id="local-events">
+                <div class="outerClass2 col-md-5" id="local-events">
                     <h1>Events in My City</h1>
-                    <p> Where do you live?</p>
+                   
+                    <form class="navbar-form nav-right" role="search">
+                        <div class="form-group">
+                             <h5> Where do you live?</h5>
+                            <input type="text" class="form-control" placeholder="Search">
+                             <button type="submit" class="btn btn-default">Submit</button>
+                        </div>  
+                    </form>
                     </br>
-                    <div class="outerclass col-xs-6" id="pop-events">
+                    <div class="outerclass col-md-6" id="pop-events">
                         <h4>Popular Events</h4>
+                        <p> Please search for you location using the map!</p>
                     </div> 
-                    <div class="outerclass col-xs-6" id="maps-api">   
+                    <div class="outerclass col-md-6" id="maps-api">
+                         <iframe
+                          width="450"
+                          height="250"
+                          frameborder="0" style="border:0"
+                          src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCKR0akiFwM6GkJqe-hH7oFsNvWGQ24Myg&q=record+stores+in+Seattle">
+                        </iframe> 
                     </div>
 
                 </div>
