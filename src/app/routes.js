@@ -1,22 +1,26 @@
 // app/routes.js
-
 module.exports = function(app) {
 	
 	//Frontend Routes
-	app.get('/events', function(req, res) {
-		res.sendfile('./public/views/events.html');
+
+	app.get('/about', function(req, res) {
+		res.sendfile('./public/views/about.html');
+	});
+
+	app.get('/findEvent', function(req, res) {
+		res.sendfile('./public/views/findEvent.html');
+	});
+
+	app.get('/createEvent', function(req, res) {
+		res.sendfile('./public/views/createEvent.html');
+	});
+
+	app.get('/discussions', function(req, res) {
+		res.sendfile('./public/views/forumHome.html');
 	});
 
 	app.get('/forum', function(req, res) {
 		res.sendfile('./public/views/forum.html');
-	});
-
-	app.get('/inviteFriends', function(req, res) {
-		res.sendfile('./public/views/inviteFriends.html');
-	});
-
-	app.get('/joinEvent', function(req, res) {
-		res.sendfile('./public/views/joinEvent.html');
 	});
 
 	app.get('/eventProfile', function(req, res) {
@@ -24,6 +28,6 @@ module.exports = function(app) {
 	});
 
 	app.get('*', function(req, res) {
-		res.sendfile('./public/views/index.html');
+		res.sendfile('./public/views/home.html');
 	});
 };
