@@ -1,0 +1,43 @@
+{
+    "events": [
+        {
+        	"id":1,
+            "location": "some park",
+            "name": "event1",
+            "coordinator": "Justin"
+        },
+        {
+        	"id":2,
+            "location": "some park",
+            "name": "event2",
+            "coordinator": "Justin"
+        },
+        {
+        	"id":3,
+            "location": "some park",
+            "name": "event3",
+            "coordinator": "Justin"
+        }
+    ],
+
+    "posts": [
+        {
+        	"id":1,
+            "text": "I like to discuss things",
+            "author": "justin",
+            "comments": "Plewp"
+        },
+        {
+        	"id":2,
+            "text": "I like to discuss things",
+            "author": "danielle",
+            "comments": "Plewp"
+        },
+        {
+        	"id":3,
+            "text": "I like to discuss things",
+            "author": "richie",
+            "comments": "Plewp"
+        }
+    ]
+}
