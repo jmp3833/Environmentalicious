@@ -6,6 +6,38 @@
         <link rel ="stylesheet" href="../css/bootstrap-theme.css">
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
         <script src="../../src/app/routes.js"></script>
+        <script type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsLV4A1xcgThZYX0OZrbN0mlgx0HhSDM">
+        </script>
+        <style>
+          #map-canvas {
+            height: 300px;
+            width: 300px;
+            margin: 0px;
+            padding: 0px
+          }
+        </style>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: 43.083, lng: -77.675},
+          zoom: 14
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+        var marker = new google.maps.Marker({
+            position: { lat: 43.08301, lng: -77.67501},
+            map: map,
+            title:"Sustainalot"
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            map.setZoom(15);
+            map.setCenter(marker.getPosition());
+        });
+      }
+      
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     </head>
 
     <body ng-app="">
@@ -54,12 +86,7 @@
                         <p> Please search for you location using the map!</p>
                     </div> 
                     <div class="outerclass col-md-6" id="maps-api">
-                         <iframe
-                          width="450"
-                          height="250"
-                          frameborder="0" style="border:0"
-                          src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCKR0akiFwM6GkJqe-hH7oFsNvWGQ24Myg&q=record+stores+in+Seattle">
-                        </iframe> 
+                        <div id="map-canvas"></div>
                     </div>
 
                 </div>
