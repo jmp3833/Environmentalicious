@@ -11,24 +11,24 @@ function getEvents(callback){
     	return console.log(err);
   	}
   		parsedData = JSON.parse(data);
-		callback(parsedData.events)
+		  callback(parsedData.events)
 	});
 }
 
 //Get all forum posts from JSON file
-function getPosts(){
+function getPosts(callback){
 	fs.readFile('data/data.json', 'utf8', function (err,data) {
   	
   	if (err) {
     	return console.log(err);
   	}
   		parsedData = JSON.parse(data);
-		return parsedData.posts
+		  callback(parsedData.posts);
 	});
 }
 
 //Get a single forum post based on unique identifier. 
-function getPostById (id){
+function getPostById (id, callback){
 	fs.readFile('data/data.json', 'utf8', function (err,data) {
   
   	if (err) {
@@ -37,14 +37,14 @@ function getPostById (id){
   		posts = JSON.parse(data).posts;
 		for (i = 0; i < posts.length; i++) {
 			if (posts[i].id == id) {
-				return posts[i]; 
+			   callback(posts[i]); 
 			}
 		}
 	});
 }
 
 //Get a single event based on unique identifier. 
-function getEventById (id){
+function getEventById (id, callback){
 	fs.readFile('data/data.json', 'utf8', function (err,data) {
   
   	if (err) {
@@ -53,7 +53,7 @@ function getEventById (id){
   		events = JSON.parse(data).events;
 		for (i = 0; i < events.length; i++) {
 			if (events[i].id == id) {
-				return events[i]; 
+				callback(events[i]); 
 			}
 		}
 	});
