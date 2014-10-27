@@ -4,18 +4,18 @@ app.config(['$routeProvider'],
     function($routeProvider) {
         $routeProvider.
             when('/createEvent', {
-                templateUrl: '/createEvent.html'
+                templateUrl: '../views/createEvent.html'
             }).
             when('/findEvent', {
-                templateUrl: '/findEvent.html'
+                templateUrl: '../views/findEvent.html'
             }).
             when('/forumHome', {
-                templateUrl: '/forumHome.html'
+                templateUrl: '../views/forumHome.html'
             }). 
             when('/about', {
-                templateUrl: 'about.html'
+                templateUrl: '../views/about.html'
             }).
             otherwise({
-                redirectTo: '/home.html'
+                redirectTo: '../views/home.html'
             });
 }])
