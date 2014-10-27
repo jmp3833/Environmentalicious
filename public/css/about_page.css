@@ -1,0 +1,56 @@
+@CHARSET "ISO-8859-1";
+
+/*
+.class{ fndsaljkfnas; }
+#id{fkdaslnfa;}
+*/
+
+body{
+	background: black;
+}
+
+a{
+	font-size: 1.25em;
+	color: #5C4033;
+}
+a:hover { 
+    color: yellow;
+}
+
+.scrollContent{
+
+	text-align: center;
+
+}
+
+#title_section{
+	background: #008a05;
+
+}
+
+#title{
+	padding-top: 2em;
+	font-size: 4.5em;
+}
+
+#login_reg_href{
+	padding: 1em;
+	text-align: right;
+}
+
+#what_we_do_section{
+	background: blue;
+
+}
+
+#map_it_section{
+	background: green;
+}
+
+#cleanup_section{
+	background: blue;
+}
+
+#get_involved_section{
+	background: #5C4033;
+}
