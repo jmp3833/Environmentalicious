@@ -1,32 +1,19 @@
 // app/routes.js
+
+var controller = require('../controller/data_controller')
+
 module.exports = function(app) {
-	
-	//Frontend Routes
 
-	app.get('/about', function(req, res) {
-		res.sendfile('./public/views/about.html');
+	//Backend data service routes
+
+	app.get('/api/events', function(req, res) {
+		events = controller.getEvents(function(responseJSON) {
+			console.log(responseJSON);
+		});
+		res.end();
 	});
 
-	app.get('/findEvent', function(req, res) {
-		res.sendfile('./public/views/findEvent.html');
-	});
-
-	app.get('/createEvent', function(req, res) {
-		res.sendfile('./public/views/createEvent.html');
-	});
-
-	app.get('/discussions', function(req, res) {
-		res.sendfile('./public/views/forumHome.html');
-	});
-
-	app.get('/forum', function(req, res) {
-		res.sendfile('./public/views/forum.html');
-	});
-
-	app.get('/eventProfile', function(req, res) {
-		res.sendfile('./public/views/singleEvent.html');
-	});
-
+	//If all else fails, go home
 	app.get('*', function(req, res) {
 		res.sendfile('./public/views/home.html');
 	});
