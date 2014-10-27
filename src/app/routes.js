@@ -6,8 +6,8 @@ module.exports = function(app) {
 	//Backend data service routes
 	app.get('/api/events', function(req, res) {
 		events = controller.getEvents(function(responseJSON) {
-			res.json(responseJSON);
+			res.setHeader('Content-Type', 'application/json');
+			res.end(JSON.stringify(responseJSON));
 		});
-		res.end();
 	});
 };
