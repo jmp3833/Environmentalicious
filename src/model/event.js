@@ -4,10 +4,11 @@
 **/
 
 // Constructor
-function Event(location, name, coordinator) {
+function Event(location, name, coordinator, id) {
   this.location = location;
   this.name = name;
   this.coordinator = coordinator;
+  this.id = id;
 }
 
 // export the class

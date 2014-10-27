@@ -2,6 +2,7 @@
 //simple data access model to read and write to JSON files
 
 fs = require('fs')
+Event = require('../model/event')
 
 //Get all event objects from JSON file
 function getEvents(callback){
@@ -13,6 +14,23 @@ function getEvents(callback){
   		parsedData = JSON.parse(data);
 		  callback(parsedData.events)
 	});
+}
+
+//Create an Event and store in JSON file
+function createEvent(location, name, coordinator){
+  fs.readFile('data/data.json', 'utf8', function (err, data) {
+    
+    if (err) {
+      return console.log(err);
+    }
+      parsedData = JSON.parse(data);
+      var id = parsedData.events.length + 1
+      var event = new Event(location, name, coordinator, id);
+      console.log(event);
+      parsedData.events.push(event);
+      fs.writeFileSync('data/data.json', JSON.stringify(parsedData));
+      //callback(parsedData.events)
+  });
 }
 
 //Get all forum posts from JSON file
@@ -58,6 +76,8 @@ function getEventById (id, callback){
 		}
 	});
 }
+
+createEvent("location", "name", "coordinator");
 
 module.exports = {
     getEvents: getEvents,
