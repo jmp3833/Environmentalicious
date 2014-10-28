@@ -1,21 +1,17 @@
-var app = angular.module('app', ['ngRoute'])
+var app = angular.module('app', ['ngRoute']);
 
-app.config(['$routeProvider'], 
-    function($routeProvider) {
+app.config(function ($routeProvider) {
         $routeProvider.
             when('/createEvent', {
-                templateUrl: '../views/createEvent.html'
+                templateUrl: 'partials/createEvent'
             }).
             when('/findEvent', {
-                templateUrl: '../views/findEvent.html'
+                templateUrl: 'partials/findEvent'
             }).
             when('/forumHome', {
-                templateUrl: '../views/forumHome.html'
+                templateUrl: 'partials/forumHome'
             }). 
-            when('/about', {
-                templateUrl: '../views/about.html'
-            }).
             otherwise({
-                redirectTo: '../views/home.html'
+                redirectTo: '/index'
             });
-}])
+});
