@@ -31,11 +31,8 @@ module.exports = function(app) {
 		res.sendfile('./public/views/index.html');
 	});
 
-	app.get('/:name', function(req, res){
-		var name = req.params.name;
-		console.log(name);
-		exports.partials = res.sendfile('partials/' + name);
-		console.log(exports.partials);
+	app.get('/about', function(req, res){
+		res.sendfile('./public/views/about.html');
 	});
 
 	app.get('/partials/:name', function(req, res) {
