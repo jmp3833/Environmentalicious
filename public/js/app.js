@@ -2,6 +2,9 @@ var app = angular.module('app', ['ngRoute']);
 
 app.config(function ($routeProvider) {
         $routeProvider.
+            when('/home',{
+                templateUrl : 'partials/home'
+            }).
             when('/createEvent', {
                 templateUrl: 'partials/createEvent'
             }).
@@ -12,6 +15,6 @@ app.config(function ($routeProvider) {
                 templateUrl: 'partials/forumHome'
             }). 
             otherwise({
-                redirectTo: '/index'
+                redirectTo: '/home'
             });
 });
