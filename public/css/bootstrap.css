@@ -263,6 +263,9 @@ th {
     border: 1px solid #ddd !important;
   }
 }
+p.navbar-text.navbar-right{
+  color:#648b60;
+}
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../fonts/glyphicons-halflings-regular.eot');
@@ -3681,7 +3684,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #ffffff;
 }
 .nav > li.disabled > a {
-  color: #ffffff;
+  color: ##648B60;
 }
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
