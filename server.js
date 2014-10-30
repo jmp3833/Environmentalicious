@@ -18,6 +18,7 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the
 													// header in the request.
 													// simulate DELETE/PUT
 console.log(__dirname);
+console.log("server has started!");
 app.use(express.static(__dirname + '/public')); // set the static files location
 												// /public/img will be /img for
 												// users
