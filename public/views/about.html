@@ -4,6 +4,8 @@
         <title>Environmentalicious</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <script type="text/javascript" src="js/jquery.min.js"> </script>
+        <script type="text/javascript" src="js/greensock/TweenMax.min.js"> </script>        
+
         <script type="text/javascript" src="js/jquery.scrollmagic.js"> </script>
         <script type="text/javascript" src="js/about_page.js"> </script>
   		<link rel="stylesheet" type="text/css" href="css/about_page.css" />
@@ -46,12 +48,20 @@
 
 				<section id="cleanup_section" class="section">
 
-					<h1> Clean up! </h1>
-
-					<img  id="recycle_bin" src="images/recycle-bin.png">
-					<div id="paper_crumples">
-						<img src="images/80-crumpled_paper.png">
+					<h1 id="clean_up_title"> Clean up! </h1>
+					<br>
+					<div id="trigger_bin">
+						<img  id="recycle_bin" src="images/recycle-bin.png">
 					</div>
+					<br>
+					<div id="paper_crumples_right">
+						<img id="crumble1" src="images/80-crumpled_paper.png">
+						<img id="crumble3" src="images/80-crumpled_paper.png"> 
+					</div>
+					<div id="paper_crumples_left">
+						<img id="crumble2" src="images/80-crumpled_paper.png">
+					</div>
+
 
 				</section>
 

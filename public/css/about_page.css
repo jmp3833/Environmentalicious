@@ -1,16 +1,29 @@
 @CHARSET "ISO-8859-1";
 
+@media only screen and (min-width: 768px) {
+
+	section{
+		min-width: 768px;
+        height: 600px;
+	}
+
+	#cleanup_section{
+		height: 1200px;
+
+	}
+}
+
 body{
 	background: black;
 }
 
 h1{
-	font-size: 4.5em;
-	padding-top: 1em;
+	font-size: 56px;
+	padding-top: 25px;
 }
 
 a{
-	font-size: 1.25em;
+	font-size: 20px;
 	color: #5C4033;
 }
 a:hover { 
@@ -18,7 +31,7 @@ a:hover {
 }
 
 p{
-	font-size: 2.25em;
+	font-size: 32px;
 }
 
 .scrollContent{
@@ -34,7 +47,7 @@ p{
 }
 
 #title{
-	padding-top: 2.5em;
+	padding-top: 150px;
 }
 
 #login_reg_href{
@@ -43,8 +56,8 @@ p{
 }
 
 #down_arrow{
-	padding: 1em;
-	font-size: 3.5em;
+	padding: 20px;
+	font-size: 50px;
 }
 
 /*
@@ -55,7 +68,7 @@ p{
 }
 
 #map{
-	padding-top: 3em;
+	padding-top: 40px;
 }
 
 /*
@@ -74,13 +87,18 @@ p{
 
 #recycle_bin{
 	position: relative;
-	top: 3em;
-	padding-bottom: 10em;
+	top: 25px;
+	padding-bottom: 75px;
 }
 
-#paper_crumples{
-	margin-right: 30em;
+#paper_crumples_right{
+	margin-right: 250px;
+	display: inline-block;
+}
 
+#paper_crumples_left{
+	text-align: right;
+	display: inline-block;
 }
 
 /*
