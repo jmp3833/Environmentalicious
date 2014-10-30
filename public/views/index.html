@@ -8,8 +8,9 @@
         <link rel ="stylesheet" href="../css/googlemaps.css">
         <!-- ANGULAR STUFF  -->
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
-        <script src="../js/app.js">
-       <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js"> </script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"> </script>
+        <script src="../js/app.js"> </script>
+
        <!--MAPS API STUFF -->
         <script type="text/javascript"
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxsLV4A1xcgThZYX0OZrbN0mlgx0HhSDM">
@@ -21,16 +22,16 @@
         <!--                    NAVIGATION                                     -->
         <nav class="navbar navbar-default" role="navigaion">
             <div class="container-fluid">
+
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#"><i><b>Environmentalicious</b></i></a>
-                    
+                    <a class="navbar-brand" href="#" style="color:#f4fcf4;"><i><b>Environmentalicious</b></i></a>
                 </div>
 
                 <div class="collapse navbar-collapse" style="text-align:center">
                     <ul class="nav navbar-nav">
-                        <li><a href="/createEvent">Create Event</a></li>
-                        <li><a href="/findEvent"> Find Event</a></li>
-                        <li><a href="/forumHome"> Discussions</a></li>
+                        <li><a href="#/createEvent">Create Event</a></li> 
+                        <li><a href="#/findEvent"> Find Event</a></li> 
+                        <li><a href="#/forumHome"> Discussions</a></li>
                         <li><a href="/about"> About</a></li>
                     </ul>
                     <p class="navbar-text navbar-right">Welcome, <a href="/about">User!</a></p>

@@ -1,7 +1,7 @@
 function autoResizeDiv(){
-	console.log(document.getElementById('title_section').className.style);
+
 	var size = window.innerHeight;
-	if( size < 350){
+	if( size < 600){
 		size = '100%'
 	}else{
 		size = size + 'px'
@@ -17,3 +17,5 @@ $( document ).ready(function(){
 	window.onresize = autoResizeDiv;
 	autoResizeDiv();
 });
+
+var controller = new ScrollMagic();

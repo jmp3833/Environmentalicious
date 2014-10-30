@@ -1,12 +1,12 @@
 @CHARSET "ISO-8859-1";
 
-/*
-.class{ fndsaljkfnas; }
-#id{fkdaslnfa;}
-*/
-
 body{
 	background: black;
+}
+
+h1{
+	font-size: 4.5em;
+	padding-top: 1em;
 }
 
 a{
@@ -17,20 +17,24 @@ a:hover {
     color: yellow;
 }
 
-.scrollContent{
-
-	text-align: center;
-
+p{
+	font-size: 2.25em;
 }
 
+.scrollContent{
+	text-align: center;
+}
+
+/*
+ *		Section 1
+ */
 #title_section{
 	background: #008a05;
 
 }
 
 #title{
-	padding-top: 2em;
-	font-size: 4.5em;
+	padding-top: 2.5em;
 }
 
 #login_reg_href{
@@ -38,19 +42,56 @@ a:hover {
 	text-align: right;
 }
 
-#what_we_do_section{
-	background: blue;
-
+#down_arrow{
+	padding: 1em;
+	font-size: 3.5em;
 }
 
+/*
+ *		Section 2
+ */
+#what_we_do_section{
+	background: blue;
+}
+
+#map{
+	padding-top: 3em;
+}
+
+/*
+ *		Section 3
+ */
 #map_it_section{
 	background: green;
 }
 
+/*
+ *		Section 4
+ */
 #cleanup_section{
 	background: blue;
 }
 
+#recycle_bin{
+	position: relative;
+	top: 3em;
+	padding-bottom: 10em;
+}
+
+#paper_crumples{
+	margin-right: 30em;
+
+}
+
+/*
+ *		Section 5
+ */
 #get_involved_section{
 	background: #5C4033;
 }
+
+#sign_up{
+	padding: 3em;
+	padding-bottom: 10em;
+}
+

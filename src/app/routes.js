@@ -26,7 +26,22 @@ module.exports = function(app) {
 	});
 
 	//Frontend Routes
-	app.get('*', function(req, res) {
+
+	app.get('/', function(req, res) {
 		res.sendfile('./public/views/index.html');
 	});
+
+	app.get('/about', function(req, res){
+		res.sendfile('./public/views/about.html');
+	});
+
+	app.get('/partials/:name', function(req, res) {
+
+		var name = req.params.name;
+		console.log("Routing");
+		console.log("partials/" + name);
+		exports.partials = res.sendfile( './public/views/partials/' + name + '.html');
+
+	});
+
 };
