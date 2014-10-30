@@ -1,1 +1,26 @@
-<h1>Events Broo</h1>
+ <!--                    PAGE CONTENT                       -->
+<div class="container">
+    <div class="OuterMostClass row">
+        <!--    My Events sidebar   -->
+        <div class="outerClass col-md-3" id="my-events" style="background:#C3DCD6;  
+                                                        margin-right: 60px;
+                                                        margin-left:30px; 
+                                                        border: 2px solid;
+                                                        border-radius: 25px;">
+            <h1 style="border-bottom: thin dotted #648B60;"> My Events </h1>
+            
+            {{events}}
+            <li style="list-style-type: none;"ng-repeat="e in events">{{e.id}}</li>
+
+            <br/>
+            <p> Would you like to <a href="#/createEvent">create an event?</a></p>
+        </div>
+        <!--    Content   -->
+        <div class="outerClass2 col-md-7" id="find-events" style="background:#C3DCD6;  
+                                                            margin-left: 100px;
+                                                            border: 2px solid;">
+        <h1 style="border-bottom: thin dotted #648B60;">Find Event</h1>
+
+        </div>
+    </div> 
+</div>
