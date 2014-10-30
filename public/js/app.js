@@ -3,7 +3,8 @@ var app = angular.module('app', ['ngRoute']);
 app.config(function ($routeProvider) {
         $routeProvider.
             when('/home',{
-                templateUrl : 'partials/home'
+                templateUrl : 'partials/home',
+                controller : 'googlemaps'
             }).
             when('/createEvent', {
                 templateUrl: 'partials/createEvent'
