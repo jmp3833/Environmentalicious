@@ -1,0 +1,4 @@
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"event":{"location":"yep","name":"yeahthatsanamealright", "coordinator": "coordinator1"}}' http://localhost:3000/api/createEvent
+
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"post":{"text":"yep","author":"imanauthor", "comments": ["ilikeit", "ihateit"] }}' http://localhost:3000/api/createPost
+

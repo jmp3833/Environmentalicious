@@ -42,6 +42,22 @@ module.exports = function(app) {
 		res.end("Post deleted");
 	});
 
+	app.post('/api/createEvent', function(req, res) {
+		var location = req.body.event.location;
+		var name = req.body.event.name;
+		var coordinator = req.body.event.coordinator;
+		controller.createEvent(location, name, coordinator);
+		res.end("Event Created!");
+	});
+
+	app.post('/api/createPost', function(req, res) {
+		var text = req.body.post.text;
+		var author = req.body.post.author;
+		var comments = req.body.post.comments;
+		controller.createPost(text, author, comments);
+		res.end("Post Created!");
+	});
+
 	//Frontend Routes
 
 	app.get('/', function(req, res) {
