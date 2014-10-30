@@ -2,18 +2,22 @@
 <div class="container">
     <div class="OuterMostClass row">
         <div class="outerClass col-md-3" id="my-events" style="background:#C3DCD6;  
-                                                        margin-right: 60px; 
+                                                        margin-right: 60px;
+                                                        margin-left:30px; 
                                                         border: 2px solid;
                                                         border-radius: 25px;">
-            <h1> My Events </h1>
-            <p> You don't seem to have any events!</p>
+            <h1 style="border-bottom: thin dotted #648B60;"> My Events </h1>
+            
+            {{events}}
+            <li ng-repeat="e in events">{{e.id}}</li>
+
             <br/>
-            <p> Would you like to <a href="#">create an event?</a></p>
+            <p> Would you like to <a href="#/createEvent">create an event?</a></p>
         </div>
         <div class="outerClass2 col-md-5" id="local-events" style="background:#C3DCD6;  
-                                                            margin-left: 60px;
+                                                            margin-left: 120px;
                                                             border: 2px solid;">
-            <h1>Events in My City</h1>
+            <h1 style="border-bottom: thin dotted #648B60;">Events in My City</h1>
            
             <form class="navbar-form nav-right" role="search">
                 <div class="form-group">
@@ -26,7 +30,7 @@
             </br>
             <div class="outerclass col-md-6" id="pop-events" style="background:#C3DCD6;  
                                                               border: 2px solid;">
-                <h4>Popular Events</h4>
+                <h4 style="border-bottom: thin dotted #648B60;">Popular Events</h4>
 
                 <p> Please search for you location using the map!</p>
             </div> 

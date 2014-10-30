@@ -18,3 +18,18 @@ app.config(function ($routeProvider) {
                 redirectTo: '/home'
             });
 });
+
+app.controller("mainController", ['$scope', '$http', function($scope, $http){
+  
+        var app = this;
+        $http.get("http://localhost:3000/api/events")
+        .success(function(data) {
+        $scope.events = data;
+        console.log("data got");
+      })
+        .error(function(data){
+            console.log("no got");
+        })
+
+    
+}])
