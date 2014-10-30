@@ -14,20 +14,22 @@
 }
 
 body{
-	background: black;
+	background: #717171;
 }
 
 h1{
 	font-size: 56px;
 	padding-top: 25px;
+	font-family:'Trebuchet MS'
+	font-weight:bold;
 }
 
 a{
 	font-size: 20px;
-	color: #5C4033;
+	color: #789c79;
 }
 a:hover { 
-    color: yellow;
+    color: #4a763e;
 }
 
 p{
@@ -42,7 +44,7 @@ p{
  *		Section 1
  */
 #title_section{
-	background: #008a05;
+	background: #B0D2A8;
 
 }
 
@@ -64,7 +66,7 @@ p{
  *		Section 2
  */
 #what_we_do_section{
-	background: blue;
+	background: #c3dcd6;
 }
 
 #map{
@@ -75,14 +77,14 @@ p{
  *		Section 3
  */
 #map_it_section{
-	background: green;
+	background: #B0D2A8;
 }
 
 /*
  *		Section 4
  */
 #cleanup_section{
-	background: blue;
+	background: #c3dcd6;
 }
 
 #recycle_bin{
