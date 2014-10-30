@@ -25,6 +25,23 @@ module.exports = function(app) {
 		});
 	});
 
+	app.get('/api/getPost/:id', function(req, res) {
+		event = controller.getPostById(req.param("id"), function(responseJSON){
+			res.setHeader('Content-Type', 'application/json');
+			res.end(JSON.stringify(responseJSON));
+		});
+	});
+
+	app.get('/api/deleteEvent/:id', function(req, res) {
+		event = controller.deleteEvent(req.param("id"));
+		res.end("Event deleted!");
+	});
+
+	app.get('/api/deletePost/:id', function(req, res) {
+		event = controller.deletePost(req.param("id"));
+		res.end("Post deleted");
+	});
+
 	//Frontend Routes
 
 	app.get('/', function(req, res) {
