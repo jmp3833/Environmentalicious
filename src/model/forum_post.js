@@ -4,10 +4,11 @@
 **/
 
 // Constructor
-function Post(text, author, comments) {
+function Post(text, author, comments, id) {
   this.text = text;
   this.author = author;
   this.comments = comments;
+  this.id = id;
 }
 
 // export the class

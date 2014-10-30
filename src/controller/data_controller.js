@@ -3,6 +3,7 @@
 
 fs = require('fs')
 Event = require('../model/event')
+Post = require('../model/forum_post')
 
 //Get all event objects from JSON file
 function getEvents(callback){
@@ -16,6 +17,22 @@ function getEvents(callback){
 	});
 }
 
+//Get a single event based on unique identifier. 
+function getEventById (id, callback){
+  fs.readFile('data/data.json', 'utf8', function (err,data) {
+  
+    if (err) {
+      return console.log(err);
+    }
+      events = JSON.parse(data).events;
+    for (i = 0; i < events.length; i++) {
+      if (events[i].id == id) {
+        callback(events[i]); 
+      }
+    }
+  });
+}
+
 //Create an Event and store in JSON file
 function createEvent(location, name, coordinator){
   fs.readFile('data/data.json', 'utf8', function (err, data) {
@@ -24,10 +41,28 @@ function createEvent(location, name, coordinator){
       return console.log(err);
     }
       parsedData = JSON.parse(data);
-      var id = parsedData.events.length + 1
+      var id = parsedData.events[parsedData.events.length-1].id + 1
       var event = new Event(location, name, coordinator, id);
-      console.log(event);
       parsedData.events.push(event);
+      fs.writeFileSync('data/data.json', JSON.stringify(parsedData));
+      //callback(parsedData.events)
+  });
+}
+
+//Delete an event by ID if it exists
+function deleteEvent(id){
+  fs.readFile('data/data.json', 'utf8', function (err, data) {
+    
+    if (err) {
+      return console.log(err);
+    }
+      parsedData = JSON.parse(data);
+      for (i = 0; i < parsedData.events.length; i++){
+        if (parsedData.events[i].id == id){
+          parsedData.events.splice(parsedData.events[i], 1);
+        }
+      }
+
       fs.writeFileSync('data/data.json', JSON.stringify(parsedData));
       //callback(parsedData.events)
   });
@@ -61,27 +96,48 @@ function getPostById (id, callback){
 	});
 }
 
-//Get a single event based on unique identifier. 
-function getEventById (id, callback){
-	fs.readFile('data/data.json', 'utf8', function (err,data) {
-  
-  	if (err) {
-    	return console.log(err);
-  	}
-  		events = JSON.parse(data).events;
-		for (i = 0; i < events.length; i++) {
-			if (events[i].id == id) {
-				callback(events[i]); 
-			}
-		}
-	});
+//Create a post and store in JSON file
+function createPost(text, author, comments){
+  fs.readFile('data/data.json', 'utf8', function (err, data) {
+    
+    if (err) {
+      return console.log(err);
+    }
+      parsedData = JSON.parse(data);
+      var id = parsedData.posts[parsedData.posts.length-1].id + 1
+      var post = new Post(text, author, comments, id);
+      parsedData.posts.push(post);
+      fs.writeFileSync('data/data.json', JSON.stringify(parsedData));
+      //callback(parsedData.posts)
+  });
 }
 
-createEvent("location", "name", "coordinator");
+//Delete a post by ID if it exists
+function deletePost(id){
+  fs.readFile('data/data.json', 'utf8', function (err, data) {
+    
+    if (err) {
+      return console.log(err);
+    }
+      parsedData = JSON.parse(data);
+      for (i = 0; i < parsedData.posts.length; i++){
+        if (parsedData.posts[i].id == id){
+          parsedData.posts.splice(parsedData.posts[i], 1);
+        }
+      }
+
+      fs.writeFileSync('data/data.json', JSON.stringify(parsedData));
+      //callback(parsedData.events)
+  });
+}
 
 module.exports = {
     getEvents: getEvents,
     getPosts: getPosts,
     getPostById: getPostById,
-    getEventById: getEventById
+    getEventById: getEventById,
+    createPost: createPost,
+    deletePost: deletePost,
+    createEvent: createEvent,
+    deleteEvent: deleteEvent
 };
