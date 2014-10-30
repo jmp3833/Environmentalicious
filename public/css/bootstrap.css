@@ -266,6 +266,16 @@ th {
 p.navbar-text.navbar-right{
   color:#648b60;
 }
+
+input, select, textarea{
+    color: #648B60;
+}
+
+textarea:focus, input:focus {
+    color: #648B60;
+}
+
+
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../fonts/glyphicons-halflings-regular.eot');
