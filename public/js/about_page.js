@@ -5,6 +5,34 @@
  */
 $(document).ready(function($) {
 
+	//Smooth scroll to href targers
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 600, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+
+	// google map pin
+	var pin = {
+		initalize: {
+			curviness: 0,
+			autoRotate: false,
+			values : [ { x: 160, y : -650 } ]
+		},
+		place: {
+			curviness: 0,
+			autoRotate: false,
+			values : [{ x : 160, y : -165}]
+		}
+	}
+
 	// paper throw animation
 	var throwPaperCrumble = {
 		one : {
@@ -32,13 +60,26 @@ $(document).ready(function($) {
 					{x: 150,	y: -325}
 				] 
 		}
-}
+	}
 
 	//controller for scroll magic
 	var controller = new ScrollMagic();
 
+	//google map pin
+	var mapPinTween = new TimelineMax() 
+			.add(TweenMax.to($("#pin"), 0.1, {css:{bezier:pin.initalize}, ease:Linear.easeNone}))
+			.add(TweenMax.to($("#pin"), 0.1, {css:{visibility:"visible"}}))
+			.add(TweenMax.to($("#pin"), 1.5, {css:{bezier:pin.place}, ease:Linear.easeNone, scale : 50}))
+			.add(TweenMax.to($("#map_message"), 2.0, {css:{visibility:"visible"}}))
+
+	var mapPinScene = new ScrollScene({triggerElement: "#map_it_title", duration: 600, offset: 350})
+		.setPin("#map_target")
+		.setTween(mapPinTween)
+		.addTo(controller);
+
+
 	//set tween to have the paper throw
-	var tween1 = new TimelineMax()
+	var paperTossTween = new TimelineMax()
 			.add(TweenMax.to($("#crumble1"), 1.5, {css:{bezier:throwPaperCrumble.one}, ease:Linear.easeNone}))
 			.add(TweenMax.to($("#crumble1"), 0.05, {css:{display:'none'}, ease:Linear.easeNone}) )
 			.add(TweenMax.to($("#crumble2"), 1.5, {css:{bezier:throwPaperCrumble.two}, ease:Linear.easeNone}))
@@ -47,9 +88,9 @@ $(document).ready(function($) {
 			.add(TweenMax.to($("#crumble3"), 0.05, {css:{display:'none'}, ease:Linear.easeNone}) ) ;
 
 
-	var scene1 = new ScrollScene({triggerElement: "#clean_up_title", duration: 700, offset: 150})
+	var paperTossScene = new ScrollScene({triggerElement: "#clean_up_title", duration: 700, offset: 150})
 			.setPin("#trigger_bin")
-			.setTween(tween1)
+			.setTween(paperTossTween)
 			.addTo(controller);
 
 

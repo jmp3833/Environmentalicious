@@ -22,27 +22,49 @@
 				<section id="title_section" class="section">
 
 					<div id="login_reg_href">
-						<a href=""> Login </a> | <a href=""> Register</a>
+						<a href="/#home"> Login </a> | <a href="#get_involved_section"> Register</a>
 					</div>
 
 					<h1 id="title" > <i><b>Environmentalicious</i></b> </h1>
-					<span id="down_arrow" class="glyphicon glyphicon-chevron-down"></span>
+					<a href="#what_we_do_section">
+						<span id="down_arrow" class="glyphicon glyphicon-chevron-down"></span>
+					</a>
 
 				</section>
 
 				<section id="what_we_do_section" class="section">
 
-					<h1> What we do </h1>
-					<p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
-					</p>
+					<h1> How it works: </h1>
+					<div id="what_we_do_text" style="padding-top:30px">
+						<ul>
+							<li> Clean up our community </li>
+							<li> Spot an enviromental issue </li>
+							<li> Report events with a location </li>
+							<li> Gather other user's to help </li>
+							<li> Volunteer and help others </li>
+						</ul>
+					</div>
+
+
 
 				</section>
 
 				<section id="map_it_section" class="section">
 
-					<h1> Map it! </h1>
+					<h1 id="map_it_title"> Map it! </h1>
 
-					<img id="map" src="images/map_image.png"/>
+					<div id="map_target">
+						<img id="map" src="images/map_image.png"/>
+						<br/>
+						<img id="pin" src="images/google_map_pin.png">
+						<div id="map_message">
+							<p style="font-size:20px">
+								Trash is on I-90, Let go Clean it up!
+							</p>
+						</div>
+
+					<div>
+					<br/>
 
 				</section>
 
@@ -73,19 +95,10 @@
 						<div id="name">  <label> Name: </label> <input type="text"/> </div> <br>
 						<div id="email"> <label> Email: </label> <input type="text"/> </div> <br>
 						<div id="pwd">   <label> Password: </label> <input type="password"/> </div> <br>
-						<button> Register! </button>
-
+						<button onclick="window.location.href='/#home'">Register!</button>
 					</div>
-
 				</section>
-				
-
 			</div>
-
 		</div>
-
-
 	</body>
-
-
 </html>
