@@ -90,6 +90,7 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
             {
               $http.post("/api/searchEvents", $scope.query)
                 .success(function(data) {
+                     $scope.results = data;
                      $scope.resultsReturned = true;
                   })
                 .error(function(data){
