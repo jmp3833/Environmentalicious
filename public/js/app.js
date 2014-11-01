@@ -51,10 +51,16 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
 
         // Object for creating new events
         $scope.event = {};
-        event.name = "";
-        event.description = "";
-        event.location = "";
-        event.email = "";
+        $scope.event.name = "";
+        $scope.event.description = "";
+        $scope.event.location = "";
+        $scope.event.email = "";
+
+        //Object for a search query
+        $scope.aQuery = {};
+        $scope.aQuery.name = "";
+        $scope.aQuery.location = "";
+        $scope.aQuery.description = "";
 
         // This function executes when the  Create Event form submits, it posts the event object to the database 
         $scope.createEvent = function(isValid)
