@@ -57,6 +57,9 @@ a:hover {
 abbr[title] {
   border-bottom: 1px dotted;
 }
+input[type="text"][disabled] {
+   color: red;
+}
 b,
 strong {
   font-weight: bold;
