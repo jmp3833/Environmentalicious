@@ -88,7 +88,7 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
         {
             if(isValid)
             {
-              $http.post("/api/createEvent", $scope.query)
+              $http.post("/api/searchEvents", $scope.query)
                 .success(function(data) {
                      $scope.resultsReturned = true;
                   })
