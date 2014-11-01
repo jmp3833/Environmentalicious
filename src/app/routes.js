@@ -25,6 +25,13 @@ module.exports = function(app) {
 		});
 	});
 
+	app.post('/api/searchEvents', function(req, res) {
+		query = req.body;
+		controller.searchEvents(query.name, query.location, query.description, function(events){
+			res.end(events);
+		});
+	});
+
 	app.get('/api/getPost/:id', function(req, res) {
 		event = controller.getPostById(req.param("id"), function(responseJSON){
 			res.setHeader('Content-Type', 'application/json');
