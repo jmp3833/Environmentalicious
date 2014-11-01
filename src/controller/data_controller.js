@@ -131,6 +131,25 @@ function deletePost(id){
   });
 }
 
+//Return a list of events that match the three query strings
+function searchEvents(name, location, description, callback){
+    s.readFile('data/data.json', 'utf8', function (err, data) {
+    var eventList = []
+
+    if (err) {
+      return console.log(err);
+    }
+      parsedData = JSON.parse(data);
+      for (i = 0; i < parsedData.events.length; i++){
+        var selectedEvent = parsedData.events[i]; 
+        if (selectedEvent.name == name || selectedEvent.location == location || selectedEvent.description == description){
+          eventList.push(selectedEvent);
+        }
+      }
+      callback(eventList);
+  });
+}
+
 module.exports = {
     getEvents: getEvents,
     getPosts: getPosts,
