@@ -1,5 +1,6 @@
-var app = angular.module('app', ['ngRoute']);
+var app = angular.module('app', ['ngRoute']); // This is the Angular module declaration
 
+// This is the front-end route configuration
 app.config(function ($routeProvider) {
         $routeProvider.
             when('/home',{
@@ -32,7 +33,8 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
   
         var app = this;
 
-
+        // function for manually updating the list of events
+        // after a new one has been created
         $scope.getEvents = function(){
              $http.get("http://localhost:3000/api/events")
             .success(function(data) {
@@ -44,12 +46,14 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
             })
         } 
 
+        // Object for creating new events
         $scope.event = {};
         event.name = "";
         event.description = "";
         event.location = "";
         event.email = "";
 
+        // This function executes when the  Create Event form submits, it posts the event object to the database 
         $scope.createEvent = function(isValid)
         {
             if(isValid)
@@ -61,12 +65,25 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
                 $scope.getEvents();
                   })
                 .error(function(data){
-                    alert('noop');
+                    alert('There was a problem with the submission. Please try again.');
                     })
             }
             else
             {
-                alert('invalid form!');
+                alert('Your entry seems to be invalid. Please try again.');
+            }
+        }
+
+        // This function executes when the Find Event form submits either on the home page or Find Event page
+        $scope.findEvent = function(isValid)
+        {
+            if(isValid)
+            {
+
+            }
+            else
+            {
+                alert('Your entry seems to be invalid. Please try again.')
             }
         }
     
