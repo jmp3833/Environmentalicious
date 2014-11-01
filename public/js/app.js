@@ -67,7 +67,7 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
         {
             if(isValid)
             {
-                $http.post("http://localhost:3000/api/createEvent", $scope.event)
+                $http.post("/api/createEvent", $scope.event)
                 .success(function(data) {
                 alert('Event Creation Successful!');
                 $scope.didSubmit = true;
@@ -88,7 +88,13 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
         {
             if(isValid)
             {
+              $http.post("/api/createEvent", $scope.query)
+                .success(function(data) {
 
+                  })
+                .error(function(data){
+                    alert('There was a problem with the search. Please try again.');
+                    }) 
             }
             else
             {
