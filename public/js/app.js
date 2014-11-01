@@ -9,7 +9,6 @@ app.config(function ($routeProvider) {
             when('/createEvent', {
                 templateUrl: 'partials/createEvent',
                  controller : 'googlemaps'
-                controller: 'googlemaps'
             }).
             when('/findEvent', {
                 templateUrl: 'partials/findEvent',
