@@ -12,7 +12,6 @@
             <li style="list-style-type: none;"ng-repeat="e in events">{{e.id}}</li>
 
             <br/>
-            <p> Would you like to <a href="#/createEvent">create an event?</a></p>
         </div>
         <!--    Content   -->
         <div class="outerClass2 col-md-7" id="find-events" style="background:#C3DCD6;  
@@ -25,6 +24,9 @@
             </div>
             <div class="col-md-6">
                 <form class="form-horizontal nav-right" role="search">
+                    <div class="outerclass col-md-6" id="maps-api">
+                    <div id="map-canvas"></div>
+                   </div>
                     <div class="form-group" style="align:center">
                     </div>  
                 </form>
