@@ -28,6 +28,7 @@ app.config(function ($routeProvider) {
 app.controller("mainController", ['$scope', '$http', function($scope, $http){
   
         var app = this;
+
         $http.get("http://localhost:3000/api/events")
         .success(function(data) {
         $scope.events = data;
@@ -37,5 +38,25 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
             console.log("no got");
         })
 
+        $scope.event = {};
+        event.name = "";
+        event.description = "";
+        event.location = "";
+        event.email = "";
+
+        $scope.createEvent = function(isValid)
+        {
+            if(isValid)
+            {
+                $http.post("http://localhost:3000/api/events", event)
+                .success(function(data) {
+                alert('Event Creation Successful!');
+                $scope.didSubmit = true;
+                  })
+                .error(function(data){
+                    alert('noop');
+                    })
+            }
+        }
     
 }])
