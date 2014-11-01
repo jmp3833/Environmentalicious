@@ -19,7 +19,10 @@ app.config(function ($routeProvider) {
             }). 
             when('/eventResults', {
                 templateUrl: 'partials/eventResults'
-            }). 
+            }).
+            when('/singleEvent', {
+                templateUrl: 'partials/singleEvent'
+            }).
             otherwise({
                 redirectTo: '/home'
             });
