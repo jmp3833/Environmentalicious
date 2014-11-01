@@ -23,6 +23,9 @@ app.config(function ($routeProvider) {
             when('/singleEvent', {
                 templateUrl: 'partials/singleEvent'
             }).
+            when('/eventEdit', {
+                templateUrl: 'partials/eventEdit'
+            }).
             otherwise({
                 redirectTo: '/home'
             });
