@@ -13,10 +13,17 @@ app.controller('googlemaps', function($scope) {
             map: map,
             title:"Sustainalot"
         });
-        google.maps.event.addListener(marker, 'click', function() {
-            map.setZoom(15);
-            map.setCenter(marker.getPosition());
+        var infoString = '<h4><a href="/#/singleEvent">Sustainalot</a></h4>'+
+            '<p>Event: Sustainalot</p>'+
+            '<p>Location: Rochester</p>'+
+            '<p>Description: Sustaining a lot</p>';
+        var infowindow = new google.maps.InfoWindow({
+          content: infoString
         });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+        });
+        
     }
     
     init();
