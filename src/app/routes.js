@@ -59,11 +59,12 @@ module.exports = function(app) {
 	//Frontend Routes
 
 	app.get('/', function(req, res) {
-		res.sendfile('./public/views/index.html');
+		res.sendfile('./public/views/about.html');
+
 	});
 
-	app.get('/about', function(req, res){
-		res.sendfile('./public/views/about.html');
+	app.get('/index', function(req, res){
+		res.sendfile('./public/views/index.html');
 	});
 
 	app.get('/partials/:name', function(req, res) {
