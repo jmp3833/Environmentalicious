@@ -23,15 +23,8 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 
 require('./src/app/routes')(app); // configure our routes
 
-if(process.argv[2] != undefined){
-	var port = process.argv[2]
-	app.listen(port);
-	console.log("server has started! on port " + port);
-}else {
-	app.listen(3000);
-	console.log("server has started! on port 3000");
-}
-
+console.log("Server started!");
+app.listen(80);
 console.log(__dirname);
 
 exports = module.exports = app;
