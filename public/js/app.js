@@ -35,7 +35,7 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
   
         var app = this;
 
-        
+
         $scope.getEvents = function(){
              $http.get("http://localhost:3000/api/events")
             .success(function(data) {
@@ -61,7 +61,7 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
                 .success(function(data) {
                 alert('Event Creation Successful!');
                 $scope.didSubmit = true;
-                getEvents();
+                $scope.getEvents();
                   })
                 .error(function(data){
                     alert('noop');
