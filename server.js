@@ -17,13 +17,21 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the
 													// X-HTTP-Method-Override
 													// header in the request.
 													// simulate DELETE/PUT
-console.log(__dirname);
-console.log("server has started!");
 app.use(express.static(__dirname + '/public')); // set the static files location
 												// /public/img will be /img for
 												// users
 
 require('./src/app/routes')(app); // configure our routes
 
-app.listen(3000);
+if(process.argv[2] != undefined){
+	var port = process.argv[2]
+	app.listen(port);
+	console.log("server has started! on port " + port);
+}else {
+	app.listen(3000);
+	console.log("server has started! on port 3000");
+}
+
+console.log(__dirname);
+
 exports = module.exports = app;

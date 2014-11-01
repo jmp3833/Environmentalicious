@@ -4,10 +4,11 @@
 **/
 
 // Constructor
-function Event(location, name, coordinator, id) {
-  this.location = location;
+function Event(name, location, description, email, id) {
   this.name = name;
-  this.coordinator = coordinator;
+  this.location = location;
+  this.description = description;
+  this.email = email;
   this.id = id;
 }
 

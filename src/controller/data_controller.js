@@ -34,7 +34,7 @@ function getEventById (id, callback){
 }
 
 //Create an Event and store in JSON file
-function createEvent(location, name, coordinator){
+function createEvent(name, location, description, email){
   fs.readFile('data/data.json', 'utf8', function (err, data) {
     
     if (err) {
@@ -42,7 +42,7 @@ function createEvent(location, name, coordinator){
     }
       parsedData = JSON.parse(data);
       var id = parsedData.events[parsedData.events.length-1].id + 1
-      var event = new Event(location, name, coordinator, id);
+      var event = new Event(name, location, description, email, id);
       parsedData.events.push(event);
       fs.writeFileSync('data/data.json', JSON.stringify(parsedData));
       //callback(parsedData.events)

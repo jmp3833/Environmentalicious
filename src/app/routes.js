@@ -43,10 +43,8 @@ module.exports = function(app) {
 	});
 
 	app.post('/api/createEvent', function(req, res) {
-		var location = req.body.event.location;
-		var name = req.body.event.name;
-		var coordinator = req.body.event.coordinator;
-		controller.createEvent(location, name, coordinator);
+		eventResult = req.body;
+		controller.createEvent(eventResult.name, eventResult.location, eventResult.description, eventResult.email);
 		res.end("Event Created!");
 	});
 
