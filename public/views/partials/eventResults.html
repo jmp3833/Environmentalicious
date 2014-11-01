@@ -1,0 +1,61 @@
+ <!--                    PAGE CONTENT                       -->
+<div class="container">
+    <div class="OuterMostClass row">
+        <!--    My Events sidebar   -->
+        <div class="outerClass col-md-3" id="my-events" style="background:#C3DCD6;  
+                                                        margin-right: 60px;
+                                                        margin-left:30px; 
+                                                        box-shadow: 2.5px 2.5px 5px #648b60;
+                                                        border-radius: 25px;">
+            <h1 style="border-bottom: thin dotted #648B60; text-align:center;"> My Events </h1>
+            
+            {{events}}
+            <li style="list-style-type: none;"ng-repeat="e in events">{{e.id}}</li>
+
+            <br/>
+            <p> Would you like to <a href="#/createEvent">create an event?</a></p>
+        </div>
+        <!--    Content   -->
+        <div class="outerClass2 col-md-7" id="find-events" style="background:#C3DCD6;  
+                                                            margin-left: 100px;
+                                                            box-shadow: 2.5px 2.5px 5px #648b60;">
+        <h1 style="border-bottom: thin dotted #648B60; text-align:center;">Event Results</h1>
+        <div class="row">
+
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Event</th>
+                        <th>Location</th>
+                        <th colspan="2">Description</th>
+                    </tr>
+                    <tr>
+                        <td>Sustainalot</td>
+                        <td>Rochester</td>
+                        <td>Sustaining a lot</td>
+                        <td><button type="button" class="btn btn-sm btn-block">Join</button>
+                    </tr>
+                    <tr>
+                        <td>Environment</td>
+                        <td>Buffalo</td>
+                        <td>Environment a lot</td>
+                        <td><button type="button" class="btn btn-sm btn-block">Join</button>
+                    </tr>
+                    <tr>
+                        <td>Sustainalittle</td>
+                        <td>Rochester</td>
+                        <td>Sustaining a little</td>
+                        <td><button type="button" class="btn btn-sm btn-block">Join</button>
+                    </tr>
+                    <tr>
+                        <td>Environmentalicious</td>
+                        <td>Syraucse</td>
+                        <td>Environment a licious</td>
+                        <td><button type="button" class="btn btn-sm btn-block">Join</button>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+    </div> 
+</div>

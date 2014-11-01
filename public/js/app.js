@@ -17,6 +17,9 @@ app.config(function ($routeProvider) {
             when('/forumHome', {
                 templateUrl: 'partials/forumHome'
             }). 
+            when('/eventResults', {
+                templateUrl: 'partials/eventResults'
+            }). 
             otherwise({
                 redirectTo: '/home'
             });
