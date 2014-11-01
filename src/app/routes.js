@@ -28,7 +28,7 @@ module.exports = function(app) {
 	app.post('/api/searchEvents', function(req, res) {
 		query = req.body;
 		controller.searchEvents(query.name, query.location, query.description, function(events){
-			res.end(events);
+			res.end(JSON.stringify(events));
 		});
 	});
 

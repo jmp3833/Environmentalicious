@@ -133,7 +133,8 @@ function deletePost(id){
 
 //Return a list of events that match the three query strings
 function searchEvents(name, location, description, callback){
-    s.readFile('data/data.json', 'utf8', function (err, data) {
+    fs.readFile('data/data.json', 'utf8', function (err, data) {
+    
     var eventList = []
 
     if (err) {
@@ -158,5 +159,6 @@ module.exports = {
     createPost: createPost,
     deletePost: deletePost,
     createEvent: createEvent,
-    deleteEvent: deleteEvent
+    deleteEvent: deleteEvent,
+    searchEvents: searchEvents
 };
