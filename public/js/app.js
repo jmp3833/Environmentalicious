@@ -39,7 +39,7 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
         // function for manually updating the list of events
         // after a new one has been created
         $scope.getEvents = function(){
-             $http.get("http://localhost:3000/api/events")
+             $http.get("/api/events")
             .success(function(data) {
             $scope.events = data;
             console.log("data got");
