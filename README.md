@@ -1,27 +1,35 @@
 Environmentalicious
 ==
 
-Quite tasty.
+Quite tasty. And looks decent on mobile as well.
 
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
-
-## Motivation
-
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+Environmentalicious is a web application that allows users to locate environmental conservation and sustainability events in their community. These users can create their own account and register to attend events that they believe are interesting. Users will also be able to discuss future events on a site hosted forum and make comments and suggestions on other user's events!
 
 ## Installation/Running
 
-Provide code examples and explanations of how to get the project.
+If you would like to view the application without installing a server on your local machine, 
+you may navigate to http://
 
-## API Reference
+In order to load the application locally, Node.js must be installed on the local system. The most recent version of Node.js (0.10.33 at the time of this writing) can be found at http://nodejs.org/
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+Once a Node.js environment has been installed, open a command prompt or terminal and move to the root directory of the project. In order to install dependencies for the project, first type 'npm install'. Once this is completed, run the command 'node server.js' and navigate your browser to http://localhost:3000
 
-## Known Bugs
+```bash
+
+//admin permissions may be required. open a cmd window with admin privleges in windows
+sudo npm install
+
+node server.js
+
+```
+## Known Bugs and Missing Functionality
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+Danielle Gonzalez
+Justin Peterson
+Richie Kapadia
+Joe 
 
