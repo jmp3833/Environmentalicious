@@ -24,7 +24,7 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 require('./src/app/routes')(app); // configure our routes
 
 console.log("Server started!");
-app.listen(80);
+app.listen(3000);
 console.log(__dirname);
 
 exports = module.exports = app;

@@ -21,7 +21,7 @@ app.config(function ($routeProvider) {
             when('/eventResults', {
                 templateUrl: 'partials/eventResults'
             }).
-            when('/singleEvent', {
+            when('/singleEvent/:id', {
                 templateUrl: 'partials/singleEvent'
             }).
             when('/eventEdit', {
@@ -32,7 +32,7 @@ app.config(function ($routeProvider) {
             });
 });
 
-app.controller("mainController", ['$scope', '$http', function($scope, $http){
+app.controller("mainController", ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
   
         var app = this;
 
@@ -102,5 +102,15 @@ app.controller("mainController", ['$scope', '$http', function($scope, $http){
                 alert('Your entry seems to be invalid. Please try again.')
             }
         }
-    
+        
+        $scope.getIndividualEvent = function(){
+            $http.get("/api/getEvent/"+$routeParams.id)
+            .success(function(data) {
+            $scope.event = data;
+            console.log(data);
+             })
+            .error(function(data){
+                console.log("no got");
+            })
+        }
 }])
