@@ -49,6 +49,12 @@ module.exports = function(app) {
 		res.end("Post deleted");
 	});
 
+	app.post('/api/joinEvent', function(req, res) {
+		joinParams = req.body;
+		controller.joinEvent(joinParams[0], joinParams[1]);
+		res.end("Event successfully joined!");
+	});
+
 	app.post('/api/createEvent', function(req, res) {
 		eventResult = req.body;
 		controller.createEvent(eventResult.name, eventResult.location, eventResult.description, eventResult.email);
@@ -64,7 +70,6 @@ module.exports = function(app) {
 	});
 
 	//Frontend Routes
-
 	app.get('/', function(req, res) {
 		res.sendfile('./public/views/about.html');
 

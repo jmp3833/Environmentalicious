@@ -8,7 +8,6 @@ Post = require('../model/forum_post')
 //Get all event objects from JSON file
 function getEvents(callback){
 	fs.readFile('data/data.json', 'utf8', function (err, data) {
-  	
   	if (err) {
     	return console.log(err);
   	}
@@ -20,11 +19,10 @@ function getEvents(callback){
 //Get a single event based on unique identifier. 
 function getEventById (id, callback){
   fs.readFile('data/data.json', 'utf8', function (err,data) {
-  
     if (err) {
       return console.log(err);
     }
-      events = JSON.parse(data).events;
+    events = JSON.parse(data).events;
     for (i = 0; i < events.length; i++) {
       if (events[i].id == id) {
         callback(events[i]); 
@@ -151,6 +149,13 @@ function searchEvents(name, location, description, callback){
   });
 }
 
+function joinEvent(participantName, eventId){
+  getEventById(eventId, function(data){
+    event = data;
+    //event.participants.append(participantName);
+  });
+}
+
 module.exports = {
     getEvents: getEvents,
     getPosts: getPosts,
@@ -160,5 +165,6 @@ module.exports = {
     deletePost: deletePost,
     createEvent: createEvent,
     deleteEvent: deleteEvent,
-    searchEvents: searchEvents
+    searchEvents: searchEvents,
+    joinEvent: joinEvent
 };

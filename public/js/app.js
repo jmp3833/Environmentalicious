@@ -113,4 +113,16 @@ app.controller("mainController", ['$scope', '$http', '$routeParams', function($s
                 console.log("no got");
             })
         }
+
+        //assign relevant info to scope
+        $scope.joinEvent = function(id, participantName){
+            payload = [id, participantName];
+            $http.post("/api/joinEvent", payload)
+            .success(function(data) {
+                alert('Event successfully joined!');
+                  })
+                .error(function(data){
+                    alert('There was a problem with the selection. Please try again.');
+                }) 
+            }
 }])
