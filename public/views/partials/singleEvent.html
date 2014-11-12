@@ -27,7 +27,8 @@
                 <p>Coordinator Email: {{event.email}}</p>
             </div>
         </div class="Heythere">
-        <button type="submit" class="btn btn-default" ng-click="joinEvent(event.coordinator, event.id)">Join Event</button>
+        <button type="submit" class="btn btn-default" class="ng-hide" ng-click="joinEvent(event.name, event.id)" ng-hide="event.participants.length > 0">Join Event</button>
+        <p ng-hide="event.participants.length == 0">You have already joined this event!!</p>
         </div>
     </div> 
 </div>
