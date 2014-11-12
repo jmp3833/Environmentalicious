@@ -152,7 +152,26 @@ function searchEvents(name, location, description, callback){
 function joinEvent(participantName, eventId){
   getEventById(eventId, function(data){
     event = data;
-    //event.participants.append(participantName);
+    event.participants.push(participantName);
+    //Write back to JSON with updated event
+    updateEvent(event);
+  });
+}
+
+//Push an updated event that already exists into the JSON database. 
+function updateEvent(event){
+  fs.readFile('data/data.json', 'utf8', function (err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    events = JSON.parse(data).events;
+    for (i = 0; i < events.length; i++) {
+      if (events[i].id == event.id) {
+        events[i] = event;
+        parsedData.events = events;
+        fs.writeFileSync('data/data.json', JSON.stringify(parsedData));
+      }
+    }
   });
 }
 
