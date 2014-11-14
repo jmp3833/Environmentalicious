@@ -55,6 +55,7 @@ app.controller("mainController", ['$scope', '$http', '$routeParams', function($s
         $scope.event.description = "";
         $scope.event.location = "";
         $scope.event.email = "";
+        $scope.event.friends = "";
 
         //Object for a search query
         $scope.aQuery = {};
@@ -125,4 +126,10 @@ app.controller("mainController", ['$scope', '$http', '$routeParams', function($s
                     alert('There was a problem with the selection. Please try again.');
                 }) 
             }
+
+        $scope.inviteFriends = function()
+        {
+            alert('Invitations have been sent!');
+            console.log('this happened');
+        }
 }])
