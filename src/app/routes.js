@@ -71,7 +71,6 @@ module.exports = function(app) {
 	});
 
 	app.post('/api/addFriends', function(req,res) {
-		console.log("Made it here!");
 		controller.addFriends(req.body);
 		res.end("Friends Added!");
 	});

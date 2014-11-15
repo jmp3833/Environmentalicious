@@ -11,6 +11,7 @@ function Event(name, location, description, email, id) {
   this.email = email;
   this.id = id;
   this.participants = [];
+  this.invitedFriends = [];
 }
 
 // export the class

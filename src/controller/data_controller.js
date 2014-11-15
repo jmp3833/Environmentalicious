@@ -175,8 +175,16 @@ function updateEvent(event){
   });
 }
 
-function addFriends(emailList){
-  console.log(emailList);
+function addFriends(event){
+  friendsList = event.friends.split('\n');
+  for (i = 0; i < friendsList.length; i++ ){  
+    if (event.participants.indexOf(friendsList[i]) == -1){
+      //Make this bro participate if he isnt already
+      event.participants.push(friendsList[i]);
+    }
+  }
+  //Update the event with new info for continued good times with more of your buds. 
+  updateEvent(event);
 }
 
 module.exports = {
