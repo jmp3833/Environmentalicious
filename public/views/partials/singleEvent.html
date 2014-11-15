@@ -38,11 +38,11 @@
 
             <h4 style="border-bottom: thin dotted #648B60;">Invite Friends</h4>
             <p>Enter a list of line-separated email addresses</p>
-            <form name="inviteFriends" ng-submit="inviteFriends()" novalidate>
-            <div class="form-group">
-            <textarea class="form-control" rows="3" cols="20" id="invite-friends" ng-model="event.friends"></textarea>
-            </div>
-            <button class="btn btn-default" type="submit">Invite</button>
+            <form name="inviteFriendsForm" ng-submit="inviteFriends()" novalidate>
+                <div class="form-group">
+                <textarea class="form-control" rows="3" cols="20" id="invite-friends" ng-model="event.friends"></textarea>
+                </div>
+                <button class="btn btn-default" type="submit">Invite</button>
             </form>
         </div> 
         </div>
