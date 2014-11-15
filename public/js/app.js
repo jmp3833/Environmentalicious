@@ -127,9 +127,19 @@ app.controller("mainController", ['$scope', '$http', '$routeParams', function($s
                 }) 
             }
 
-        $scope.inviteFriends = function()
+        $scope.inviteFriends = function(){
         {
-            alert('Invitations have been sent!');
-            console.log('this happened');
+            var friendsList = $scope.event.friends;
+            //Split string sinto an array so that they can resemble valid JSON to the API. 
+            var friendsArray = friendsList.split('\n');
+
+            $http.post("/api/addFriends", friendsArray)
+            .success(function(data) {
+                alert('Invitations have been sent!');
+                  })
+                .error(function(data){
+                    alert('There was a problem with the selection. Please try again.');
+                }) 
+            }
         }
 }])

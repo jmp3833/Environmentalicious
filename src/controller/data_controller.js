@@ -175,6 +175,10 @@ function updateEvent(event){
   });
 }
 
+function addFriends(emailList){
+  console.log(emailList);
+}
+
 module.exports = {
     getEvents: getEvents,
     getPosts: getPosts,
@@ -185,5 +189,6 @@ module.exports = {
     createEvent: createEvent,
     deleteEvent: deleteEvent,
     searchEvents: searchEvents,
+    addFriends: addFriends,
     joinEvent: joinEvent
 };

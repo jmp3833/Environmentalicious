@@ -51,6 +51,7 @@ module.exports = function(app) {
 
 	app.post('/api/joinEvent', function(req, res) {
 		joinParams = req.body;
+		console.log(joinParams);
 		controller.joinEvent(joinParams[0], joinParams[1]);
 		res.end("Event successfully joined!");
 	});
@@ -67,6 +68,12 @@ module.exports = function(app) {
 		var comments = req.body.post.comments;
 		controller.createPost(text, author, comments);
 		res.end("Post Created!");
+	});
+
+	app.post('/api/addFriends', function(req,res) {
+		console.log("Made it here!");
+		controller.addFriends(req.body);
+		res.end("Friends Added!");
 	});
 
 	//Frontend Routes
