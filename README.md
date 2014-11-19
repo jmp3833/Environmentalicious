@@ -31,10 +31,6 @@ node server.js
 
 * There is no user authentication or login functionality. Selecting the 'log in' button on the main about page will direct the user into the web application with a default account
 
-* There is no UI for forum posts or forum threads. The backend data services have been written and the user interface will be implemented in future releases. 
-
-* There are no pages for individual events where users can register to attend the event. 
-
 ## Contributors
 
 Danielle Gonzalez
