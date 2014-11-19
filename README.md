@@ -12,7 +12,7 @@ This application is in the pre-beta phase and exhibits only some main core funct
 ## Installation/Running
 
 ### If you would like to view the application without installing a server on your local machine, 
-you may navigate to http://129.21.171.121:3000/
+you may navigate to http://salsa.rit.edu:3000/
 
 In order to load the application locally, Node.js must be installed on the local system. The most recent version of Node.js (0.10.33 at the time of this writing) can be found at http://nodejs.org/
 
