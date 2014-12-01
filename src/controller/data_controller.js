@@ -40,7 +40,7 @@ function createEvent(name, location, description, email){
     }
       parsedData = JSON.parse(data);
       var id = parsedData.events[parsedData.events.length-1].id + 1
-      var event = new Event(name, location, description, email, id);
+      var event = new Event(name, location, description, email, id, ["User [User@Example.com]"]);
       parsedData.events.push(event);
       fs.writeFileSync('data/data.json', JSON.stringify(parsedData));
       //callback(parsedData.events)
