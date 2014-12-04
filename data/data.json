@@ -1,1 +1,33 @@
-{"events":[{"id":1,"location":"some park","name":"event1","coordinator":"Justin","participants":["Justin","Justin","Justin"]},{"name":"Ilikeevents","location":"some park","description":"TestEvent2","email":"justin@email.com","id":2,"participants":[null]},{"name":"event1","location":"some park","description":"yep","email":"test@email.com","id":3,"participants":[null]},{"name":"event1","location":"some park","description":"yep","email":"test@email.com","id":4,"participants":["event1"]},{"name":"event1","location":"some park","description":"Hi","email":"test@hello.com","id":5,"participants":["event1"]},{"name":"Test Event","location":"Rochester","description":"Clean up trash","email":"test@example.com","id":6,"participants":["chh2538@rit.edu","etravishow@msn.com"],"invitedFriends":[],"friends":"chh2538@rit.edu\netravishow@msn.com"}],"posts":[{"id":1,"text":"I like to discuss things","author":"justin","comments":"Plewp"}]}
+{
+    "events": [
+        {
+            "id": 1,
+            "location": "Monroe Park",
+            "name": "Wildlife Preservation Walk",
+            "description": "Walk with your friends to raise awareness about wildlife preservation!",
+            "email": "justin@email.com",
+            "coordinator": "Justin",
+            "participants": [
+                "Justin"
+            ]
+        },
+        {
+            "name": "Park Pickup 2014",
+            "location": "Monroe Park",
+            "description": "Clean up some garbage!",
+            "email": "justin@email.com",
+            "id": 2,
+            "participants": [
+                "Justin"
+            ]
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "text": "I like to discuss things",
+            "author": "justin",
+            "comments": "Plewp"
+        }
+    ]
+}
