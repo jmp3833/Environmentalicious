@@ -1,19 +1,20 @@
  <!--                    PAGE CONTENT                       -->
 <div class="container">
     <div class="OuterMostClass row">
-        <!--    My Events sidebar   -->
-        <div class="outerClass col-md-3" id="my-events" ng-init="getEvents()"
-                                                    style="background:#C3DCD6;  
+     <!--    My Events sidebar   -->
+        <div class="outerClass col-md-3 greenFour" id="my-events" ng-init="getEvents()"
+                                                    style="  
                                                         margin-right: 60px;
                                                         margin-left:30px; 
-                                                        margin-top:30px;
+                                                        
                                                         box-shadow: 2.5px 2.5px 5px #648b60;
                                                         border-radius: 25px;">
             <h1 style="border-bottom: thin dotted #648B60; text-align:center;"> My Events </h1>
             <li style="list-style-type: none;"ng-repeat="e in events"><a ng-href="#/singleEvent/{{e.id}}">{{e.name}}</a></li>
 
             <br/>
-            <p style="border-top: thin dotted #648B60;"> Would you like to <a href="#/createEvent">create an event?</a></p>
+            <p style="border-top: thin dotted #648B60;"> <h3 style="text-align:center;"><a href="#/createEvent"><b>Create Event</b></a></h3></p>
+            <p style="border-top: thin dotted #648B60; text-align:center;"> <h3 style="text-align:center;"><a href="#/findEvent"><b>Find Event</b></a></h3></p>
         </div>
         <!--    Content   -->
         <div class="outerClass2 col-md-7" id="find-events" style="background:#C3DCD6;  
