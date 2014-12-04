@@ -62,6 +62,8 @@
                                                               box-shadow: 2.5px 2.5px 5px #648b60;
                                                               margin-top:-120px;">
                 <h4 style="border-bottom: thin dotted #648B60; text-align:center;"><b>Search Results</b></h4>
-                <div ng-show="resultsReturned">{{results}}</div>
+                <div ng-show="resultsReturned">
+                    <p ng-repeat="result in results"><a ng-href="#/singleEvent/{{result.id}}">{{result.name}} - {{result.location}}</a></p>
+                </div>
         </div>
 </div>
