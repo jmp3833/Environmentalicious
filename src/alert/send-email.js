@@ -1,5 +1,5 @@
 //SendEmail.js
-//Module to send simple text based emails
+//Module to send simple text based emails	
 
 var nodemailer = require('nodemailer');
 
@@ -7,8 +7,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'jmpeterson132@gmail.com',
-        pass: 'JmP71393'
+        user: 'XXX',
+        pass: 'XXX'
     }
 });
 
