@@ -25,6 +25,25 @@ npm install
 node server.js
 
 ```
+
+## Application Usage
+* Creating an event
+** Navigate to the 'create event' section in the left hand bar bar of the home screen after login.
+** Enter the desired event information and select the 'create event' button!
+
+* Finding an already created event
+** Navigate to the 'find event' section in the left hand bar of the home screen after login.
+** Enter information such as the event name, event location, or a keyword which can be found in the description of an event you would like to attend!
+** Click the 'find event' button and locate a result in the left hand portion of the screen. You may click on any of these events to navigate to the main event section of that page. 
+
+* Joining an event
+** Once on the main page for the specific event you would like to join, click the 'join event' button at the bottom of the screen. 
+** A pop up will notify you that you have successfully joined the event. When you return to the individual event page you will be able to see yourself as a participant in the event. 
+
+* Inviting friends to an event
+** Provide valid line separated email addresses in the invite friends text box and click the 'invite friends' button.
+** An alert will notify you that your friends have been successfully invited to the event and they will recieve an email letting them know they have been marked as a potential participant.
+
 ## Known Bug(s)
 
 * There is no user authentication or login functionality. Selecting the 'log in' button on the main about page will direct the user into the web application with a default account
