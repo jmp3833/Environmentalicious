@@ -4,6 +4,7 @@
 fs = require('fs')
 Event = require('../model/event')
 Post = require('../model/forum_post')
+mailer = require('../alert/send-email')
 
 //Get all event objects from JSON file
 function getEvents(callback){
@@ -177,7 +178,14 @@ function updateEvent(event){
 
 function addFriends(event){
   friendsList = event.friends.split('\n');
-  for (i = 0; i < friendsList.length; i++ ){  
+  for (i = 0; i < friendsList.length; i++ ){
+    if(friendsList[i] == "jmp3833@rit.edu"){
+        //Send test email for demonstration
+        message = "You've been invited to participate in " + event.name + "!" + "\n" + JSON.stringify(event);
+        subject = "Environmentalicious - Event Invitiation!!"
+        recipients = ['jmpeterson132@gmail.com']
+        mailer.sendEmail(recipients,subject,message);  
+      }
     if (event.participants.indexOf(friendsList[i]) == -1){
       //Make this bro participate if he isnt already
       event.participants.push(friendsList[i]);
